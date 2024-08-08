@@ -1,0 +1,18 @@
+{% set oldValues = data.oldValue %}
+{% if oldValues is not null %}
+    {% for key, oldValue in oldValues %}
+        {% set oldValueEncoded = oldValue|json_encode %}
+        {% set formattedOldValue = oldValueEncoded|join(',')|replace({'[': '', ']': '', '"': '', 'null,': '', '{': '', '}':'', ',null':''}) %}
+        {% if formattedOldValue != null %}
+            <div class="ui styled fluid accordion">
+                <div class="title">
+                    <i class="dropdown icon"></i>
+                    {{ key }}
+                </div>
+                <div class="content">
+                    <p>{{ formattedOldValue|raw }}</p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
