@@ -1,0 +1,27 @@
+services:
+    sylius.listener.admin_user_action_menu_builder:
+        class: ACSEO\SyliusAdminTrackerPlugin\Menu\AdminMenuListener
+        tags:
+            -   name: kernel.event_listener
+                event: sylius.menu.admin.main
+                method: addAdminMenuItems
+
+    sylius.listener.user_action:
+        class: ACSEO\SyliusAdminTrackerPlugin\EventListener\UserActionListener
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@security.helper'
+            - '@logger'
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    sylius.listener.user_authentication:
+        class: ACSEO\SyliusAdminTrackerPlugin\EventListener\AuthenticationListener
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@logger'
+            - '@sylius.repository.admin_user'
+        tags:
+            - { name: kernel.event_listener, event: Symfony\Component\Security\Http\Event\LoginFailureEvent, method: onLoginFailure }
+            - { name: kernel.event_listener, event: security.authentication.success, method: onLoginSuccess }
+            - { name: kernel.event_listener, event: Symfony\Component\Security\Http\Event\LogoutEvent, method: onLogout }

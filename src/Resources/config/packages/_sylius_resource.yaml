@@ -1,0 +1,6 @@
+sylius_resource:
+    resources:
+        sylius.user_action:
+            driver: doctrine/orm
+            classes:
+                model: ACSEO\SyliusAdminTrackerPlugin\Entity\UserAction

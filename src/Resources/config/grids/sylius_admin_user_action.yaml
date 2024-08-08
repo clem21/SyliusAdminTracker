@@ -1,0 +1,46 @@
+sylius_grid:
+    grids:
+        sylius_admin_user_action:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: ACSEO\SyliusAdminTrackerPlugin\Entity\UserAction
+            sorting:
+                createdAt: desc
+            limits: [25, 50, 100]
+            fields:
+                createdAt:
+                    type: twig
+                    label: sylius.ui.date
+                    sortable: createdAt
+                    options:
+                        template: "@UserAction/Grid/Field/date.html.twig"
+                user:
+                    path: .
+                    type: twig
+                    label: sylius.ui.user
+                    options:
+                        template: "@UserAction/Grid/Field/admin.html.twig"
+                action:
+                    type: string
+                    label: sylius.ui.action
+                oldValue:
+                    path: .
+                    type: twig
+                    label: sylius.ui.old_value
+                    options:
+                        template: "@UserAction/Grid/Field/value.html.twig"
+            filters:
+                createdAt:
+                    type: date
+                    label: sylius.ui.created_at
+                user:
+                    type: string
+                    label: sylius.ui.user
+                    options:
+                        fields: [user.lastName, user.firstName, user.email]
+                action:
+                    type: string
+                    label: sylius.ui.action
+                    options:
+                        fields: [action]

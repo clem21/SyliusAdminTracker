@@ -1,0 +1,6 @@
+{% set adminUser = data.user %}
+{% if adminUser is not null %}
+    <strong>{{ adminUser.firstName|default('-') }} {{ adminUser.lastName|default('-') }}</strong>
+    <br>
+    {{ adminUser.email }}
+{% endif %}
