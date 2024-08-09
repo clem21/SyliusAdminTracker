@@ -4,7 +4,7 @@
     </a>
 </p>
 <h1 align="center">
-Sylius Prometheus Metrics
+Sylius Admin Tracker : Plugin for logging and tracking user actions on entities
 <br />
     <a href="https://packagist.org/packages/acseo/sylius-admin-tracker-plugin" title="License" target="_blank">
         <img src="https://img.shields.io/packagist/l/acseo/sylius-admin-tracker-plugin.svg" />
