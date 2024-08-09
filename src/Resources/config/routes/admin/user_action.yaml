@@ -1,0 +1,11 @@
+sylius_admin_user_action:
+    resource: |
+        alias: sylius.user_action
+        section: admin
+        templates: "@SyliusAdmin\\Crud"
+        only: ['index']
+        grid: sylius_admin_user_action
+        vars:
+            index:
+                icon: 'file alternate'
+    type: sylius.resource

@@ -1,0 +1,9 @@
+sylius:
+    ui:
+        date: Date et heure
+        user: Nom d'utilisateur
+        IP: Adresse IP
+        user_action: Journal de bord des actions de l'Admin
+        user_actions: Journal de bord des actions de l'Admin
+        old_value: Ancienne/nouvelle valeur
+        bo_actions: Actions Backoffice
