@@ -4,7 +4,7 @@
     </a>
 </p>
 <h1 align="center">
-Sylius Admin Tracker : Plugin for logging and tracking user actions on entities
+Sylius Admin Tracker
 <br />
     <a href="https://packagist.org/packages/acseo/sylius-admin-tracker-plugin" title="License" target="_blank">
         <img src="https://img.shields.io/packagist/l/acseo/sylius-admin-tracker-plugin.svg" />
@@ -13,6 +13,7 @@ Sylius Admin Tracker : Plugin for logging and tracking user actions on entities
         <img src="https://img.shields.io/packagist/v/acseo/sylius-admin-tracker-plugin.svg" />
     </a>
 </h1>
+<p>Plugin for logging and tracking user actions on entities</p>
 
 
 ## Installation
