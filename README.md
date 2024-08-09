@@ -1,3 +1,20 @@
+<p align="center">
+    <a href="https://www.acseo.fr" target="_blank">
+        <img src="https://www.acseo.fr/assets/img/logo-200.png" alt="ACSEO" style="width: 300px"/>
+    </a>
+</p>
+<h1 align="center">
+Sylius Prometheus Metrics
+<br />
+    <a href="https://packagist.org/packages/acseo/sylius-admin-tracker-plugin" title="License" target="_blank">
+        <img src="https://img.shields.io/packagist/l/acseo/sylius-admin-tracker-plugin.svg" />
+    </a>
+    <a href="https://packagist.org/packages/acseo/sylius-admin-tracker-plugin" title="Version" target="_blank">
+        <img src="https://img.shields.io/packagist/v/acseo/sylius-admin-tracker-plugin.svg" />
+    </a>
+</h1>
+
+
 ## Installation
 
 
